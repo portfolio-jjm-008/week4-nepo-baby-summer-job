@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     double payRate = 15.50;
     double hoursWorked, totalHours = 0.0;
-    double totalIncome, afterTaxIncome;
+    double grossIncome, afterTaxIncome;
     double clothes, supplies, savingsBonds, parentBonds;
 
     // Input hours worked for each of the 5 weeks
@@ -15,10 +15,10 @@ int main() {
     }
 
     // Calculate total income before tax
-    totalIncome = payRate * totalHours;
+    grossIncome = payRate * totalHours;
 
     // After-tax income (14% tax)
-    afterTaxIncome = totalIncome * (1 - 0.14);
+    afterTaxIncome = grossIncome * (1 - 0.14);
 
     // Money spent on clothes and accessories (10%)
     clothes = afterTaxIncome * 0.10;
@@ -36,13 +36,12 @@ int main() {
     parentBonds = savingsBonds * 0.5;
 
     // Output results
-    cout << "\n--- Summer Job Financial Summary ---\n";
-    cout << "Income before taxes: $" << totalIncome << endl;
-    cout << "Income after taxes: $" << afterTaxIncome << endl;
-    cout << "Money spent on clothes and accessories: $" << clothes << endl;
-    cout << "Money spent on school supplies: $" << supplies << endl;
-    cout << "Money spent on savings bonds: $" << savingsBonds << endl;
-    cout << "Money parents spent on additional savings bonds: $" << parentBonds << endl;
+    cout << "Gross Income: $" << grossIncome << endl;
+    cout << "Net after taxes: $" << afterTaxIncome << endl;
+    cout << "Clothes and Accessories: $" << clothes << endl;
+    cout << "School Supplies: $" << supplies << endl;
+    cout << "Personal Savings Bond Spend: $" << savingsBonds << endl;
+    cout << "Parents' Spend on Gift Savings Bonds: $" << parentBonds << endl;
 
     return 0;
 }
