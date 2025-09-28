@@ -1,0 +1,13 @@
+BEGIN
+
+DECLARE hoursWorkedPerWeek = 40
+DECLARE weeksPerSummer = 8
+DECLARE/CALC totalHours = hoursWorkedPerWeek * weeksPerSummer
+
+DECLARE payRate = 15.50
+DECLARE afterTaxIncome, clothes, schoolSupplies, savingsBonds, parentBonds
+
+Calc gross gross income 
+grossIncome = payRate
+
+END

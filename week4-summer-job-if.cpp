@@ -4,28 +4,35 @@ using namespace std;
 int main() {
     double hoursWorkedPerWeek = 40.0;
     double weeksPerSummer = 8;
+    double payRate = 15.50;
+
+    // Calculate Total Hours worked during the summer
     double totalHours = hoursWorkedPerWeek * weeksPerSummer;
 
-    double payRate = 15.50;
-    double grossIncome, afterTaxIncome, clothes, schoolSupplies, savingsBonds, parentBonds;
-
-    // Calculate total income before tax
-    grossIncome = payRate * totalHours;
-
+    
+    // Calculate total summer income before tax
+    double grossIncome = totalHours * payRate
+    
     // After-tax income (14% tax | 1 - .14 = .86)
-    afterTaxIncome = grossIncome * (1 - .86);
-
+    double afterTaxIncome = grossIncome * (1 - .86);
+    
     // Money spent on clothes and accessories (10%)
-    clothes = afterTaxIncome * 0.10;
-
+    double clothes = afterTaxIncome * 0.10;
+    
     // Money spent on school supplies (1%)
-    schoolSupplies = afterTaxIncome * 0.01;
-
+    double schoolSupplies = afterTaxIncome * 0.01;
+    
     // Remaining money after clothes and supplies
-    double remaining = afterTaxIncome - (clothes + schoolSupplies);
+    double remainingMoney = afterTaxIncome - (clothes + schoolSupplies);
+    
+    double savingsBonds, parentBonds;
+    // cin percentBondContribution
+    // 0% -> remainingMoney * .01
+    // > 0% <= 25% -> remainingMoney * percentBondContribution
+    // > 25% -> remainingMoney * percentBondContribution = personalContributedAmt * .40 = parentContributedAmt
 
     // Money spent on savings bonds (25% of remaining)
-    savingsBonds = remaining * 0.25;
+    savingsBonds = remainingMoney * 0.25;
 
     // Parents' contribution to savings bonds (50 cents per dollar)
     parentBonds = savingsBonds * 0.5;
